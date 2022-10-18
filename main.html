@@ -4,10 +4,18 @@
 <head>
     <title>Calculator</title>
     <style>
-        #thetext{
-            border-color: black;
+        #thetext {
             border-style: solid;
-            border: 5px;
+            width: 50%;
+
+        }
+        #buttonBox{
+            width: 40%;
+            height: 50%;
+
+        }
+        .number{
+            width: 30%;
         }
     </style>
 </head>
@@ -22,17 +30,20 @@
             oldText = texttoshow;
         }
     </script>
-    <div id="thetext"> </div>
-    <button onclick="display(1)">1</button>
-    <button onclick="display(2)">2</button>
-    <button onclick="display(3)">3</button>
-    <button onclick="display(4)">4</button>
-    <button onclick="display(5)">5</button>
-    <button onclick="display(6)">6</button>
-    <button onclick="display(7)">7</button>
-    <button onclick="display(8)">8</button>
-    <button onclick="display(9)">9</button>
-    <button onclick="display(0)">0</button>
+    <div id="thetext"> 0</div>
+    <div id="buttonBox">
+        <button class="number" onclick="display(1)">1</button>
+        <button class="number" onclick="display(2)">2</button>
+        <button class="number" onclick="display(3)">3</button>
+        <button class="number" onclick="display(4)">4</button>
+        <button class="number" onclick="display(5)">5</button>
+        <button class="number" onclick="display(6)">6</button>
+        <button class="number" onclick="display(7)">7</button>
+        <button class="number" onclick="display(8)">8</button>
+        <button class="number" onclick="display(9)">9</button>
+        <button class="number" onclick="display(0)">0</button>
+    </div>
+
 </body>
 
 </html>
