@@ -22,12 +22,49 @@
 
 <body>
     <script>
-        let oldText = "";
+        let oldNumber = "";
+        var numberToShow;
+        var oldSign;
         function display(selected) {
 
-            texttoshow = oldText + selected;
-            document.getElementById("thetext").innerHTML = texttoshow;
-            oldText = texttoshow;
+            numberToShow = oldNumber + selected;
+            document.getElementById("thetext").innerHTML = numberToShow;
+            oldNumber = numberToShow;
+        }
+        function operation(sign){
+            numberA=numberToShow;
+            oldNumber="";
+            oldSign=sign;
+            if(sign==1)
+            {
+                document.getElementById("thetext").innerHTML = "+";  
+            }
+            else if(sign==2)
+            {
+                document.getElementById("thetext").innerHTML = "-";
+            }
+            else if(sign==3)
+            {
+                document.getElementById("thetext").innerHTML = "*";
+            }
+            
+        }
+        function equal(){
+
+            if(oldSign==1)
+            {
+               result= parseInt(numberA)+parseInt(numberToShow);
+            }
+            else if(oldSign==2)
+            {
+                result= parseInt(numberA)-parseInt(numberToShow); 
+            }
+            else if(oldSign==3)
+            {
+                result= parseInt(numberA)*parseInt(numberToShow);
+            }
+            document.getElementById("thetext").innerHTML = result;
+           oldNumber="";
         }
     </script>
     <div id="thetext"> 0</div>
@@ -42,6 +79,12 @@
         <button class="number" onclick="display(8)">8</button>
         <button class="number" onclick="display(9)">9</button>
         <button class="number" onclick="display(0)">0</button>
+
+        <button class="number" onclick="operation(1)">+</button>
+        <button class="number" onclick="operation(2)">-</button>
+        <button class="number" onclick="operation(3)">*</button>
+        <button class="number" onclick="equal()">=</button>
+
     </div>
 
 </body>
