@@ -23,7 +23,6 @@
 <body>
     <script>
         let oldNumber = "";
-        var numberToShow;
         var oldSign;
         function display(selected) {
 
@@ -53,15 +52,15 @@
 
             if(oldSign==1)
             {
-               result= parseInt(numberA)+parseInt(numberToShow);
+               result= parseInt(numberA)+parseInt(oldNumber);
             }
             else if(oldSign==2)
             {
-                result= parseInt(numberA)-parseInt(numberToShow); 
+                result= parseInt(numberA)-parseInt(oldNumber); 
             }
             else if(oldSign==3)
             {
-                result= parseInt(numberA)*parseInt(numberToShow);
+                result= parseInt(numberA)*parseInt(oldNumber);
             }
             document.getElementById("thetext").innerHTML = result;
            oldNumber="";
