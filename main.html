@@ -56,6 +56,10 @@
                 case 6:
                 document.getElementById("thetext").innerHTML = "√";
                     break;
+                case 7:
+                document.getElementById("thetext").innerHTML = numberA+"!";
+                equal(sign);
+                break;
             }
             
         }
@@ -80,9 +84,16 @@
                 case 6:
                     result= Math.sqrt(parseFloat(oldNumber));
                     break;
+                case 7:
+                    result=1;
+                    for(let i=1;i<=parseFloat(numberA);i++)
+                    {
+                        result *=i;
+                    }
+                    break;
             }
 
-            document.getElementById("thetext").innerHTML = result;
+            document.getElementById("thetext").innerHTML =result;
             oldNumber="";
             ans=result;
             numberToShow=result;
@@ -107,7 +118,6 @@
         <button class="number" onclick="display(8)">8</button>
         <button class="number" onclick="display(9)">9</button>
         <button class="number" onclick="display(0)">0</button>
-        <button class="number" onclick="display(',')">,</button>
         <button class="number" onclick="display(ans)">ans</button>
 
         <button class="number" onclick="operation(1)">+</button>
@@ -116,6 +126,7 @@
         <button class="number" onclick="operation(4)">÷</button>
         <button class="number" onclick="operation(5)">pow</button>
         <button class="number" onclick="operation(6)">√</button>
+        <button class="number" onclick="operation(7)">!</button>
 
         <button class="number" onclick="equal()">=</button>
         <button class="number" onclick="erase()">DEL</button>
