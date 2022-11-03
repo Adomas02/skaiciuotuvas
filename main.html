@@ -24,6 +24,7 @@
     <script>
         let oldNumber = "";
         var oldSign;
+        numberToShow="";
         function display(selected) {
 
             numberToShow = oldNumber + selected;
@@ -46,6 +47,18 @@
             {
                 document.getElementById("thetext").innerHTML = "*";
             }
+            else if(sign==4)
+            {
+                document.getElementById("thetext").innerHTML = "÷";
+            }
+            else if(sign==5)
+            {
+                document.getElementById("thetext").innerHTML = "^";
+            }
+            else if(sign==6)
+            {
+                document.getElementById("thetext").innerHTML = "√";
+            }                         
             
         }
         function equal(){
@@ -62,8 +75,28 @@
             {
                 result= parseInt(numberA)*parseInt(oldNumber);
             }
+            else if(oldSign==4)
+            {
+                result= parseInt(numberA)/parseInt(oldNumber);
+            }
+            else if(oldSign==5)
+            {
+                result= parseInt(numberA)**parseInt(oldNumber);
+            }
+            else if(oldSign==6)
+            {
+                result= Math.sqrt(parseInt(oldNumber));
+            }      
+
             document.getElementById("thetext").innerHTML = result;
            oldNumber="";
+           numberToShow=result;
+        }
+        function erase()
+        {
+            document.getElementById("thetext").innerHTML = "0";
+            oldNumber="";
+            numberToShow="";
         }
     </script>
     <div id="thetext"> 0</div>
@@ -82,7 +115,12 @@
         <button class="number" onclick="operation(1)">+</button>
         <button class="number" onclick="operation(2)">-</button>
         <button class="number" onclick="operation(3)">*</button>
+        <button class="number" onclick="operation(4)">÷</button>
+        <button class="number" onclick="operation(5)">pow</button>
+        <button class="number" onclick="operation(6)">√</button>
+
         <button class="number" onclick="equal()">=</button>
+        <button class="number" onclick="erase()">DEL</button>
 
     </div>
 
