@@ -3,135 +3,50 @@
 
 <head>
     <title>Calculator</title>
-    <style>
-        #thetext {
-            border-style: solid;
-            width: 50%;
 
-        }
-        #buttonBox{
-            width: 40%;
-            height: 50%;
+    <link rel="stylesheet" href="CalcStyle.css">
 
-        }
-        .number{
-            width: 30%;
-        }
-    </style>
 </head>
 
 <body>
-    <script>
-        let oldNumber = "";
-        var oldSign;
-        numberToShow="";
-        ans=0;
-        function display(selected) {
+    <script src="calcScript.js"></script>
+    <div id="main">
+        <div id="thetext"> 0</div>
+        <div id="buttonBox">
+        
+        <button class="operator" onclick="operation(5)">^</button>
+        <button class="operator" onclick="operation(7)">!</button>
+        <button class="operator" onclick="operation(6)">√</button>
+        <button class="operator" onclick="operation(4)">÷</button>
 
-            numberToShow = oldNumber + selected;
-            document.getElementById("thetext").innerHTML = numberToShow;
-            oldNumber = numberToShow;
-        }
-        function operation(sign){
-            numberA=numberToShow;
-            oldNumber="";
-            oldSign=sign;
-            
-            switch(sign){
-                case 1:
-                document.getElementById("thetext").innerHTML = "+";
-                    break;
-                case 2:
-                document.getElementById("thetext").innerHTML = "-";
-                    break;
-                case 3:
-                document.getElementById("thetext").innerHTML = "*";
-                    break;
-                case 4:
-                document.getElementById("thetext").innerHTML = "÷";
-                    break;
-                case 5:
-                document.getElementById("thetext").innerHTML = "^";
-                    break;
-                case 6:
-                document.getElementById("thetext").innerHTML = "√";
-                    break;
-                case 7:
-                document.getElementById("thetext").innerHTML = numberA+"!";
-                equal(sign);
-                break;
-            }
-            
-        }
-        function equal(){
-            var result;
-            switch(oldSign){
-                case 1:
-                    result= parseFloat(numberA)+parseFloat(oldNumber);
-                    break;
-                case 2:
-                    result= parseFloat(numberA)-parseFloat(oldNumber);
-                    break;
-                case 3:
-                    result= parseFloat(numberA)*parseFloat(oldNumber);
-                    break;
-                case 4:
-                    result= parseFloat(numberA)/parseFloat(oldNumber);
-                    break;
-                case 5:
-                    result= parseFloat(numberA)**parseFloat(oldNumber);
-                    break;
-                case 6:
-                    result= Math.sqrt(parseFloat(oldNumber));
-                    break;
-                case 7:
-                    result=1;
-                    for(let i=1;i<=parseFloat(numberA);i++)
-                    {
-                        result *=i;
-                    }
-                    break;
-            }
-
-            document.getElementById("thetext").innerHTML =result;
-            oldNumber="";
-            ans=result;
-            numberToShow=result;
-        }
-        function erase()
-        {
-            document.getElementById("thetext").innerHTML = "0";
-            oldNumber="";
-            numberToShow="";
-            ans=0;
-        }
-    </script>
-    <div id="thetext"> 0</div>
-    <div id="buttonBox">
-        <button class="number" onclick="display(1)">1</button>
-        <button class="number" onclick="display(2)">2</button>
-        <button class="number" onclick="display(3)">3</button>
-        <button class="number" onclick="display(4)">4</button>
-        <button class="number" onclick="display(5)">5</button>
-        <button class="number" onclick="display(6)">6</button>
         <button class="number" onclick="display(7)">7</button>
         <button class="number" onclick="display(8)">8</button>
         <button class="number" onclick="display(9)">9</button>
+        <button class="operator" onclick="operation(3)">*</button>
+
+        <button class="number" onclick="display(4)">4</button>
+        <button class="number" onclick="display(5)">5</button>
+        <button class="number" onclick="display(6)">6</button>
+        <button class="operator" onclick="operation(2)">-</button>
+
+        <button class="number" onclick="display(1)">1</button>
+        <button class="number" onclick="display(2)">2</button>
+        <button class="number" onclick="display(3)">3</button>
+        <button class="operator" onclick="operation(1)">+</button>
+        
+        
+        
+        
+        
         <button class="number" onclick="display(0)">0</button>
-        <button class="number" onclick="display(ans)">ans</button>
+        <button class="editor" onclick="display(ans)">ans</button>
+        <button class="editor" onclick="erase()">C</button>
+        <button class="operator" onclick="equal()">=</button>
+        
 
-        <button class="number" onclick="operation(1)">+</button>
-        <button class="number" onclick="operation(2)">-</button>
-        <button class="number" onclick="operation(3)">*</button>
-        <button class="number" onclick="operation(4)">÷</button>
-        <button class="number" onclick="operation(5)">pow</button>
-        <button class="number" onclick="operation(6)">√</button>
-        <button class="number" onclick="operation(7)">!</button>
-
-        <button class="number" onclick="equal()">=</button>
-        <button class="number" onclick="erase()">DEL</button>
-
+        </div> 
     </div>
+
 
 </body>
 
