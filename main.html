@@ -25,6 +25,7 @@
         let oldNumber = "";
         var oldSign;
         numberToShow="";
+        ans=0;
         function display(selected) {
 
             numberToShow = oldNumber + selected;
@@ -35,68 +36,63 @@
             numberA=numberToShow;
             oldNumber="";
             oldSign=sign;
-            if(sign==1)
-            {
-                document.getElementById("thetext").innerHTML = "+";  
-            }
-            else if(sign==2)
-            {
+            
+            switch(sign){
+                case 1:
+                document.getElementById("thetext").innerHTML = "+";
+                    break;
+                case 2:
                 document.getElementById("thetext").innerHTML = "-";
-            }
-            else if(sign==3)
-            {
+                    break;
+                case 3:
                 document.getElementById("thetext").innerHTML = "*";
-            }
-            else if(sign==4)
-            {
+                    break;
+                case 4:
                 document.getElementById("thetext").innerHTML = "÷";
-            }
-            else if(sign==5)
-            {
+                    break;
+                case 5:
                 document.getElementById("thetext").innerHTML = "^";
-            }
-            else if(sign==6)
-            {
+                    break;
+                case 6:
                 document.getElementById("thetext").innerHTML = "√";
-            }                         
+                    break;
+            }
             
         }
         function equal(){
-
-            if(oldSign==1)
-            {
-               result= parseInt(numberA)+parseInt(oldNumber);
+            var result;
+            switch(oldSign){
+                case 1:
+                    result= parseFloat(numberA)+parseFloat(oldNumber);
+                    break;
+                case 2:
+                    result= parseFloat(numberA)-parseFloat(oldNumber);
+                    break;
+                case 3:
+                    result= parseFloat(numberA)*parseFloat(oldNumber);
+                    break;
+                case 4:
+                    result= parseFloat(numberA)/parseFloat(oldNumber);
+                    break;
+                case 5:
+                    result= parseFloat(numberA)**parseFloat(oldNumber);
+                    break;
+                case 6:
+                    result= Math.sqrt(parseFloat(oldNumber));
+                    break;
             }
-            else if(oldSign==2)
-            {
-                result= parseInt(numberA)-parseInt(oldNumber); 
-            }
-            else if(oldSign==3)
-            {
-                result= parseInt(numberA)*parseInt(oldNumber);
-            }
-            else if(oldSign==4)
-            {
-                result= parseInt(numberA)/parseInt(oldNumber);
-            }
-            else if(oldSign==5)
-            {
-                result= parseInt(numberA)**parseInt(oldNumber);
-            }
-            else if(oldSign==6)
-            {
-                result= Math.sqrt(parseInt(oldNumber));
-            }      
 
             document.getElementById("thetext").innerHTML = result;
-           oldNumber="";
-           numberToShow=result;
+            oldNumber="";
+            ans=result;
+            numberToShow=result;
         }
         function erase()
         {
             document.getElementById("thetext").innerHTML = "0";
             oldNumber="";
             numberToShow="";
+            ans=0;
         }
     </script>
     <div id="thetext"> 0</div>
@@ -111,6 +107,8 @@
         <button class="number" onclick="display(8)">8</button>
         <button class="number" onclick="display(9)">9</button>
         <button class="number" onclick="display(0)">0</button>
+        <button class="number" onclick="display(',')">,</button>
+        <button class="number" onclick="display(ans)">ans</button>
 
         <button class="number" onclick="operation(1)">+</button>
         <button class="number" onclick="operation(2)">-</button>
