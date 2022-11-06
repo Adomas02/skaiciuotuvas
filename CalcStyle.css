@@ -3,7 +3,7 @@
         background-color: rgb(51, 51, 51);
     }
     #thetext {
-        font-size: 50px;
+        font-size: 65px;
         color: white;
         height: 30%;
         width: 85%;
@@ -17,26 +17,26 @@
 
 }
 .number{
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
+    width: 120px;
+    height: 120px;
+    font-size: 60px;
     border-radius: 50%;
     margin: 0px;
 
 }
 .editor{
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
+    width: 120px;
+    height: 120px;
+    font-size: 60px;
     border-radius: 50%;
     background-color: grey;
     color: white;
     margin: 0px;
 }
 .operator{
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
+    width: 120px;
+    height: 120px;
+    font-size: 60px;
     background-color: orange;
     color: white;
     border-radius: 50%;
