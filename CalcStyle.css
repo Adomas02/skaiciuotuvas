@@ -1,7 +1,8 @@
 @media only screen and (min-width: 1001px) {
-    body{
+    body {
         background-color: rgb(51, 51, 51);
     }
+
     #thetext {
         font-size: 65px;
         color: white;
@@ -9,51 +10,57 @@
         width: 85%;
         margin-left: 4%;
         overflow: hidden;
-}
-#buttonBox{
+    }
 
-    height: 50%;
-    padding-top: 1%;
+    #buttonBox {
 
-}
-.number{
-    width: 120px;
-    height: 120px;
-    font-size: 60px;
-    border-radius: 50%;
-    margin: 0px;
+        height: 50%;
+        padding-top: 1%;
 
-}
-.editor{
-    width: 120px;
-    height: 120px;
-    font-size: 60px;
-    border-radius: 50%;
-    background-color: grey;
-    color: white;
-    margin: 0px;
-}
-.operator{
-    width: 120px;
-    height: 120px;
-    font-size: 60px;
-    background-color: orange;
-    color: white;
-    border-radius: 50%;
-    margin: 0px;
-}
-#main{
-    width: 30%;
-    height: 95%;
-    margin-left: 35%;
-    margin-top: 5%;
-}  
+    }
+
+    .number {
+        width: 120px;
+        height: 120px;
+        font-size: 60px;
+        border-radius: 50%;
+        margin: 0px;
+
+    }
+
+    .editor {
+        width: 120px;
+        height: 120px;
+        font-size: 60px;
+        border-radius: 50%;
+        background-color: grey;
+        color: white;
+        margin: 0px;
+    }
+
+    .operator {
+        width: 120px;
+        height: 120px;
+        font-size: 60px;
+        background-color: orange;
+        color: white;
+        border-radius: 50%;
+        margin: 0px;
+    }
+
+    #main {
+        width: 30%;
+        height: 95%;
+        margin-left: 35%;
+        margin-top: 5%;
+    }
 }
 
-@media only screen and (max-width: 1000px){
-    body{
+@media only screen and (max-width: 1000px) {
+    body {
         background-color: rgb(51, 51, 51);
     }
+
     #thetext {
         font-size: 120px;
         color: white;
@@ -62,7 +69,8 @@
         margin-left: 10%;
         overflow: hidden;
     }
-    .number{
+
+    .number {
         width: 200px;
         height: 200px;
         font-size: 100px;
@@ -70,7 +78,8 @@
         margin: 10px;
 
     }
-    .editor{
+
+    .editor {
         width: 200px;
         height: 200px;
         font-size: 100px;
@@ -79,25 +88,28 @@
         color: white;
         margin: 10px;
     }
-    .operator{
+
+    .operator {
         width: 200px;
         height: 200px;
-   
+
         font-size: 100px;
         background-color: orange;
         color: white;
         border-radius: 50%;
         margin: 10px;
     }
-    #buttonBox{
+
+    #buttonBox {
         width: 100%;
         height: 50%;
         padding-left: 5%;
         padding-right: 5%;
         padding-top: 5%;
-    
+
     }
-    #main{
+
+    #main {
         width: 95%;
         height: 95%;
         margin-top: 30%;
