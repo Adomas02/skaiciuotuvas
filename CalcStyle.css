@@ -1,16 +1,54 @@
 @media only screen and (min-width: 1001px) {
-  #thetext {
-    border-style: solid;
-    width: 50%;
+    body{
+        background-color: rgb(51, 51, 51);
+    }
+    #thetext {
+        font-size: 50px;
+        color: white;
+        height: 30%;
+        width: 85%;
+        margin-left: 4%;
+        overflow: hidden;
+
 
 }
 #buttonBox{
-    width: 40%;
+
     height: 50%;
+    padding-top: 1%;
 
 }
 .number{
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 50%;
+    margin: 0px;
+
+}
+.editor{
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 50%;
+    background-color: grey;
+    color: white;
+    margin: 0px;
+}
+.operator{
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    margin: 0px;
+}
+#main{
     width: 30%;
+    height: 95%;
+    margin-left: 35%;
+    margin-top: 5%;
 }  
 }
 
@@ -64,6 +102,7 @@
     #main{
         width: 95%;
         height: 95%;
-        margin-top: 20%;
+        margin-top: 30%;
+        margin-bottom: auto;
     }
 }
