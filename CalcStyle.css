@@ -9,8 +9,6 @@
         width: 85%;
         margin-left: 4%;
         overflow: hidden;
-
-
 }
 #buttonBox{
 
@@ -62,7 +60,7 @@
         height: 30%;
         width: 85%;
         margin-left: 10%;
-    
+        overflow: hidden;
     }
     .number{
         width: 200px;
